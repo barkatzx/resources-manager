@@ -1,0 +1,126 @@
+.qrm-resources {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 15px;
+	align-items: stretch;
+}
+
+.qrm-card {
+	box-sizing: border-box;
+	min-width: 0;
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+	border: 1px solid #eeeeee;
+	border-radius: 12px;
+	background: #f8f6f3;
+}
+
+.qrm-card__title {
+	margin: 0 0 12px;
+	color: #172033;
+	font-size: 1.25rem;
+	line-height: 1.35;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	overflow-wrap: anywhere;
+}
+
+.qrm-card__description {
+	min-width: 0;
+	color: #475569;
+	line-height: 1.65;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	overflow-wrap: anywhere;
+}
+
+.qrm-card__description > :first-child {
+	margin-top: 0;
+}
+
+.qrm-card__description > :last-child {
+	margin-bottom: 0;
+}
+
+.qrm-card__buttons {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-top: auto;
+	padding-top: 20px;
+}
+
+.qrm-card__buttons .qrm-button {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	flex: 0 1 auto;
+	padding: 10px 16px;
+	border: 1px solid #1d4ed8;
+	border-radius: 6px;
+	background: #1d4ed8;
+	color: #fff;
+	font-weight: 600;
+	line-height: 1.35;
+	text-align: center;
+	text-decoration: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+	overflow-wrap: anywhere;
+}
+
+.qrm-card__buttons .qrm-button--1 {
+	justify-content: flex-start;
+}
+
+.qrm-card__buttons .qrm-button--2 {
+	justify-content: flex-end;
+	border-color: #eeeeee;
+	background: #fff;
+	color: #000;
+}
+
+.qrm-card__buttons .qrm-button--2:first-child {
+	margin-left: auto;
+}
+
+.qrm-card__buttons .qrm-button--2:hover,
+.qrm-card__buttons .qrm-button--2:focus {
+	border-color: #d5d5d5;
+	background: #fff;
+	color: #000;
+}
+
+.qrm-button__icon {
+	flex: 0 0 18px;
+	width: 18px;
+	height: 18px;
+	fill: currentColor;
+}
+
+.qrm-card__buttons .qrm-button:hover,
+.qrm-card__buttons .qrm-button:focus {
+	border-color: #1e40af;
+	background: #1e40af;
+	color: #fff;
+}
+
+@media (max-width: 900px) {
+	.qrm-resources {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 600px) {
+	.qrm-resources {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
+	.qrm-card {
+		padding: 20px;
+	}
+}
